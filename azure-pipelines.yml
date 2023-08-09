@@ -14,7 +14,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  - group: variables
+  - group: upload-variables
 
 steps:
 - task: UsePythonVersion@0
