@@ -23,8 +23,10 @@ if __name__ == '__main__':
     bucket = args.bucket
     local_file = args.local_file
     remote_file = args.remote_file
+
+    proxy_env = os.getenv('http_proxy')
     http_proxy = urllib3.ProxyManager(
-        args.http_proxy,
+        proxy_env,
         timeout=urllib3.Timeout.DEFAULT_TIMEOUT,
         cert_reqs='CERT_REQUIRED',
         retries=urllib3.Retry(
@@ -32,7 +34,7 @@ if __name__ == '__main__':
             backoff_factor=0.2,
             status_forcelist=[500, 502, 503, 504]
         )
-    ) if args.http_proxy != None else None
+    ) if proxy_env != None else None
     try:
         download(
             url,
@@ -41,6 +43,7 @@ if __name__ == '__main__':
             bucket,
             remote_file,
             local_file,
+            http_proxy
         )
     except Exception as ex:
         print("Error", ex)
