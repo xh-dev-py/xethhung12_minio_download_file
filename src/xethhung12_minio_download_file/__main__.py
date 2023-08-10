@@ -26,7 +26,7 @@ if __name__ == '__main__':
     http_proxy = urllib3.ProxyManager(
         args.http_proxy,
         timeout=urllib3.Timeout.DEFAULT_TIMEOUT,
-        # cert_reqs='CERT_REQUIRED',
+        cert_reqs='CERT_REQUIRED',
         retries=urllib3.Retry(
             total=5,
             backoff_factor=0.2,
