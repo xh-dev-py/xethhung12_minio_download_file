@@ -2,6 +2,7 @@ import argparse
 
 from xethhung12_minio_download_file import download
 import urllib3
+import os
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
@@ -25,6 +26,8 @@ if __name__ == '__main__':
     remote_file = args.remote_file
 
     proxy_env = os.getenv('http_proxy')
+    if proxy_env != None:
+        print("Using proxy: ", proxy_env)
     http_proxy = urllib3.ProxyManager(
         proxy_env,
         timeout=urllib3.Timeout.DEFAULT_TIMEOUT,
