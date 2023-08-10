@@ -14,7 +14,7 @@ if __name__ == '__main__':
     parser.add_argument('--bucket', help='the bucket name')
     parser.add_argument('--remote-file', help='the remote file')
     parser.add_argument('--local-file', help='the local file')
-    parser.add_argument('--http-proxy', help='the local file')
+    parser.add_argument('--http-proxy', default=None, help='the local file')
     args = parser.parse_args()
 
     url = args.url
