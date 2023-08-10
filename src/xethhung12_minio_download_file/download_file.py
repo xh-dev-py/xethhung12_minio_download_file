@@ -9,7 +9,7 @@ def download(url, access_key, secret_key, bucket, remote, local, proxy=None):
         url,
         access_key=access_key,
         secret_key=secret_key,
-        http_client=urllib3.ProxyManager(proxy)
+        http_client=proxy
     )
 
     rs = client.fget_object(
