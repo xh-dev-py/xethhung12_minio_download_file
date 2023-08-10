@@ -1,5 +1,4 @@
 from minio import Minio
-import urllib3
 
 def download(url, access_key, secret_key, bucket, remote, local, proxy=None):
     client = Minio(
