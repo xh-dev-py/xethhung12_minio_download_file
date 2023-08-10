@@ -5,11 +5,11 @@ def download(url, access_key, secret_key, bucket, remote, local, proxy=None):
         url,
         access_key=access_key,
         secret_key=secret_key,
+        http_client=proxy
     ) if proxy != None else Minio(
         url,
         access_key=access_key,
-        secret_key=secret_key,
-        http_client=proxy
+        secret_key=secret_key
     )
 
     rs = client.fget_object(
