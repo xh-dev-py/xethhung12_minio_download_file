@@ -4,3 +4,4 @@ dist
 script.txt
 *.iml
 venv
+__pycache__
