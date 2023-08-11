@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "xethhung12_minio_download_file"
-version = "0.0.11"
+version = "0.0.12"
 description = "A small program downloading file to minio repo"
 readme = "README.md"
 requires-python = ">=3.7"
