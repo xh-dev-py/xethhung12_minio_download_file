@@ -1,7 +1,3 @@
-***
-~~[xethhung12_minio_downlaod_file]~~ has moved to [[xethhung12_minio]](https://github.com/xh-dev/xethhung12_minio).\
-This repo no longer maintained.
----
 
 # Build
 ```shell
@@ -15,7 +11,7 @@ python twine upload dist/* -u __token__ -p {token}
 ```
 
 # Usage 
-```python
+```shell
 python -m xethhung12_minio_download_file \
     --url {url} \
     --access-key {access-key} \

@@ -1,9 +1,6 @@
 import argparse
 
 from xethhung12_minio_download_file import download
-import urllib3
-import os
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
